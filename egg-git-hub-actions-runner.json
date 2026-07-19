@@ -4,20 +4,20 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2026-07-18T14:35:30+00:00",
+    "exported_at": "2026-07-18T19:14:09+00:00",
     "name": "GitHub Actions Runner",
     "author": "avalongamecs@gmail.com",
     "description": "GitHub Actions runner (non-root runtime, auto-register, auto-start).",
-    "features": null,
+    "features": [],
     "docker_images": {
         "ghcr.io\/avaloncs\/ubuntu:latest": "ghcr.io\/avaloncs\/ubuntu:latest"
     },
     "file_denylist": [],
-    "startup": "cd \/home\/container\/actions-runner && { [ -f .runner ] || .\/config.sh --unattended --url \"$REPO_URL\" --token \"$REG_TOKEN\" --work _work --replace; } && exec bash run.sh",
+    "startup": "cd \/home\/container\/actions-runner && export HOME=\/home\/container && { [ -f .runner ] || .\/config.sh --unattended --url \"$REPO_URL\" --token \"$REG_TOKEN\" --work _work --replace; } && exec bash run.sh",
     "config": {
         "files": "{}",
-        "startup": "{\"done\": \"Listening for Jobs\"}",
-        "logs": "{\"custom\": []}",
+        "startup": "{\r\n    \"done\": \"Listening for Jobs\"\r\n}",
+        "logs": "{\r\n    \"custom\": []\r\n}",
         "stop": "pkill -INT -f actions-runner\/run.sh || true"
     },
     "scripts": {
