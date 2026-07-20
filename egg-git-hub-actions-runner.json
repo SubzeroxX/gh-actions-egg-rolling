@@ -5,9 +5,9 @@
         "update_url": null
     },
     "exported_at": "2026-07-18T19:14:09+00:00",
-    "name": "GitHub Actions Runner",
+    "name": "GitHub Actions Runner Rolling",
     "author": "avalongamecs@gmail.com",
-    "description": "GitHub Actions runner (non-root runtime, auto-register, auto-start).",
+    "description": "GitHub Actions runner (non-root runtime, auto-register, auto-start, latest).",
     "features": [],
     "docker_images": {
         "ghcr.io\/avaloncs\/ubuntu:latest": "ghcr.io\/avaloncs\/ubuntu:latest"
@@ -33,8 +33,8 @@
             "description": "GitHub repo URL (e.g. https:\/\/github.com\/org\/repo)",
             "env_variable": "REPO_URL",
             "default_value": "",
-            "user_viewable": false,
-            "user_editable": false,
+            "user_viewable": true,
+            "user_editable": true,
             "rules": "required|string|url",
             "field_type": "text"
         },
@@ -43,8 +43,8 @@
             "description": "GitHub runner registration token (from repo\/org settings).",
             "env_variable": "REG_TOKEN",
             "default_value": "",
-            "user_viewable": false,
-            "user_editable": false,
+            "user_viewable": true,
+            "user_editable": true,
             "rules": "required|string",
             "field_type": "text"
         }
