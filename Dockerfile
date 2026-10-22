@@ -19,6 +19,4 @@ ENV USER=container HOME=/home/container
 RUN mkdir -p $HOME
 WORKDIR /home/container
 
-RUN env
-
 ENTRYPOINT ["/bin/bash", "/worker/entrypoint.sh"]
