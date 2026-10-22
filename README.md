@@ -26,6 +26,16 @@ The egg is designed to be used with a **community-maintained Docker image**, all
 
 ---
 
+## Building the docker image
+
+1. Clone this repository
+2. Then run the following command
+   ```
+   sudo docker image build -f Dockerfile -t gh-worker:latest .
+   ```
+
+---
+
 ## Installation
 
 ### 1. Create a GitHub Runner Token
@@ -66,14 +76,6 @@ Once started:
 - The runner starts automatically
 
 No manual commands are required.
-
----
-
-## Maintainer
-
-**Avalon Community Servers**  
-📧 manager@avaloncs.net  
-🌐 https://avaloncs.net
 
 ---
 
